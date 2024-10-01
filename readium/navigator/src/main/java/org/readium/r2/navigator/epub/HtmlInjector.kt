@@ -40,6 +40,7 @@ internal fun Resource.injectHtml(
         }
 
         var content = bytes.toString(mediaType.charset ?: Charsets.UTF_8).trim()
+            .replace("<head/>", "<head></head>")
         val injectables = mutableListOf<String>()
 
         if (publication.metadata.presentation.layout == EpubLayout.REFLOWABLE) {
