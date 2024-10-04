@@ -60,7 +60,7 @@ mavenPublishing {
     coordinates(
         groupId = group.toString(),
         artifactId = property("pom.artifactId") as String,
-        version = property("pom.version") as String
+        version = "${property("pom.version") as String}-sol"
     )
 
     pom {
@@ -73,36 +73,36 @@ mavenPublishing {
                 url.set("https://github.com/readium/kotlin-toolkit/blob/main/LICENSE")
             }
         }
-        developers {
-            developer {
-                id.set("aferditamuriqi")
-                name.set("Aferdita Muriqi")
-                email.set("aferdita.muriqi@gmail.com")
-            }
-            developer {
-                id.set("mickael-menu")
-                name.set("Mickaël Menu")
-                email.set("mickael.menu@gmail.com")
-            }
-            developer {
-                id.set("qnga")
-                name.set("Quentin Gliosca")
-                email.set("quentin.gliosca@gmail.com")
-            }
-
-            developer {
-                id.set("username")
-                name.set("User Name")
-                url.set("https://github.com/username/")
-            }
-        }
-        scm {
-            url.set("https://github.com/readium/kotlin-toolkit")
-            connection.set("scm:git:github.com/readium/kotlin-toolkit.git")
-            developerConnection.set("scm:git:ssh://github.com/readium/kotlin-toolkit.git")
-        }
+//        developers {
+//            developer {
+//                id.set("aferditamuriqi")
+//                name.set("Aferdita Muriqi")
+//                email.set("aferdita.muriqi@gmail.com")
+//            }
+//            developer {
+//                id.set("mickael-menu")
+//                name.set("Mickaël Menu")
+//                email.set("mickael.menu@gmail.com")
+//            }
+//            developer {
+//                id.set("qnga")
+//                name.set("Quentin Gliosca")
+//                email.set("quentin.gliosca@gmail.com")
+//            }
+//
+//            developer {
+//                id.set("username")
+//                name.set("User Name")
+//                url.set("https://github.com/username/")
+//            }
+//        }
+//        scm {
+//            url.set("https://github.com/readium/kotlin-toolkit")
+//            connection.set("scm:git:github.com/readium/kotlin-toolkit.git")
+//            developerConnection.set("scm:git:ssh://github.com/readium/kotlin-toolkit.git")
+//        }
     }
 
-    publishToMavenCentral(SonatypeHost.S01)
-    signAllPublications()
+//    publishToMavenCentral(SonatypeHost.S01)
+//    signAllPublications()
 }

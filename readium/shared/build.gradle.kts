@@ -36,3 +36,18 @@ dependencies {
 
     androidTestImplementation(libs.kotlin.junit)
 }
+
+afterEvaluate {
+    publishing {
+        repositories {
+            maven {
+                url = uri("https://maven.pkg.github.com/sindarin-inc/kotlin-toolkit")
+                credentials {
+                    username = project.properties["GPR_USER"] as String
+                    password = project.properties["GPR_INTERNAL_KEY"] as String
+                }
+            }
+        }
+    }
+}
+
